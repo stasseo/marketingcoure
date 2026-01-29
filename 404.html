@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W4HFNKBG');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>404 — Сторінку не знайдено</title>
+  <meta name="description" content="Ой, щось пішло не так — цієї сторінки не існує. Поверніться на головну або до реєстрації." />
+  <meta name="robots" content="noindex,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0B1020" />
+
+  <style>
+    :root{
+      --bg0:#070A14; --bg1:#0B1020; --card:#0E1633;
+      --text:#EAF0FF; --muted:#A9B7E7; --soft:#7D8CC4;
+      --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.16);
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --shadow2: 0 10px 30px rgba(0,0,0,.38);
+      --accent1:#7C5CFF; --accent2:#2EE9A6; --accent3:#4CC9F0;
+      --radius: 18px; --radius2: 26px; --max: 1180px;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:var(--font); color:var(--text);
+      background:
+        radial-gradient(900px 600px at 10% 10%, rgba(124,92,255,.25), transparent 60%),
+        radial-gradient(700px 500px at 90% 0%, rgba(46,233,166,.18), transparent 55%),
+        radial-gradient(900px 700px at 70% 90%, rgba(76,201,240,.16), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px; width:100%}
+    .skip{position:absolute;left:-999px;top:10px;background:#fff;color:#000;padding:10px 12px;border-radius:10px;z-index:9999}
+    .skip:focus{left:10px}
+
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(16px);
+      background: rgba(7,10,20,.58);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo{
+      width:36px;height:36px;border-radius:12px;
+      background: radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.8), transparent 60%),
+        conic-gradient(from 220deg, var(--accent1), var(--accent2), var(--accent3), var(--accent1));
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow: 0 10px 30px rgba(124,92,255,.18);
+    }
+    .brand strong{font-weight:800;letter-spacing:.2px;line-height:1.1}
+    .brand span{display:block;font-size:12px;color:var(--muted)}
+    .btn{
+      border:1px solid var(--line2); background: rgba(255,255,255,.04);
+      color:var(--text); padding:10px 14px; border-radius:14px;
+      text-decoration:none; font-weight:700; font-size:13px;
+      display:inline-flex; align-items:center; gap:10px; transition:.2s ease;
+    }
+    .btn:hover,.btn:focus{border-color:rgba(255,255,255,.28);transform:translateY(-1px);outline:none}
+    .btn.primary{
+      border-color:transparent;
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(46,233,166,.78));
+      color:#081026; box-shadow: 0 18px 60px rgba(124,92,255,.16);
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      font-family:var(--mono);font-size:11px;color:rgba(234,240,255,.88);
+      border:1px solid var(--line2);background:rgba(255,255,255,.03);
+      padding:7px 10px;border-radius:999px;
+    }
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 18px rgba(46,233,166,.55)}
+
+    .grid-bg{
+      position:absolute; inset:-200px -200px auto -200px; height:420px;
+      background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+      background-size:46px 46px;
+      mask-image: radial-gradient(closest-side at 40% 35%, rgba(0,0,0,1), rgba(0,0,0,0));
+      opacity:.35; pointer-events:none;
+    }
+
+    main{flex:1; display:flex; align-items:center; justify-content:center; padding:34px 0; position:relative}
+    .card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+      width:min(920px, 100%);
+    }
+    .card:before{
+      content:""; position:absolute; inset:-2px;
+      background:
+        radial-gradient(520px 240px at 30% 25%, rgba(76,201,240,.14), transparent 60%),
+        radial-gradient(520px 240px at 90% 0%, rgba(124,92,255,.14), transparent 55%);
+      pointer-events:none;opacity:.9;
+    }
+    .card-inner{position:relative; z-index:1; padding:22px 22px 20px; display:grid; gap:14px}
+    .toprow{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+    .hint{color:var(--muted); font-size:12px; line-height:1.4}
+
+    .code404{
+      font-family:var(--mono);
+      letter-spacing:-2px;
+      font-weight:900;
+      line-height:1;
+      font-size:clamp(72px, 12vw, 150px);
+      margin:0;
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(46,233,166,.85), rgba(76,201,240,.85));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow: 0 14px 60px rgba(124,92,255,.14);
+    }
+    h1{
+      margin:0;
+      font-size:clamp(18px, 2.4vw, 28px);
+      letter-spacing:-.2px;
+    }
+    p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+      max-width:72ch;
+    }
+
+    .actions{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:6px}
+
+    .console{
+      border:1px solid var(--line);
+      background:rgba(12,20,48,.55);
+      border-radius:18px;
+      padding:12px;
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+    }
+    .console .head{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid var(--line);
+    }
+    .lights{display:flex;gap:8px;align-items:center}
+    .light{width:10px;height:10px;border-radius:50%}
+    .light.red{background:#FF4D6D}.light.yellow{background:#FFB703}.light.green{background:#2EE9A6}
+    .badge{font-family:var(--mono);font-size:10px;padding:4px 8px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.03); color:rgba(234,240,255,.86)}
+    pre{
+      margin:0;
+      white-space:pre-wrap;
+      font-family:var(--mono);
+      font-size:11px;
+      line-height:1.55;
+      color:rgba(234,240,255,.86);
+    }
+
+    footer{padding:22px 0 30px;border-top:1px solid var(--line);background:rgba(0,0,0,.15)}
+    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--soft);font-size:12px;line-height:1.55}
+    .foot a{color:rgba(234,240,255,.80);text-decoration:none}
+    .foot a:hover{text-decoration:underline}
+
+    @media (max-width: 720px){
+      .card-inner{padding:18px}
+      .toprow{align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4HFNKBG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <a class="skip" href="#main">Перейти до контенту</a>
+
+  <header>
+    <div class="wrap">
+      <div class="nav" role="navigation" aria-label="Навігація 404">
+        <a class="brand" href="./" aria-label="Повернутися на головну">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <strong>Digital Marketing Academy</strong>
+            <span>Курси SMM • PPC • SEO</span>
+          </div>
+        </a>
+
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <span class="pill"><span class="dot" aria-hidden="true"></span> status: <span style="font-family:var(--mono)">404</span></span>
+          <a class="btn" href="./#courses">Треки</a>
+          <a class="btn primary" href="./#register">Реєстрація</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" aria-label="404 сторінка">
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <div class="wrap">
+      <section class="card" role="region" aria-label="Сторінку не знайдено">
+        <div class="card-inner">
+          <div class="toprow">
+            <span class="pill"><span class="dot" aria-hidden="true"></span> route: <span style="font-family:var(--mono)" id="routePath">/</span></span>
+            <span class="hint">Якщо ви перейшли за старим посиланням — просто поверніться на головну.</span>
+          </div>
+
+          <p class="code404" aria-label="404">404</p>
+
+          <div>
+            <h1>Ой, щось пішло не так — цієї сторінки не існує.</h1>
+            <p>Можливо, помилилися в адресі або сторінку перемістили. Оберіть дію нижче.</p>
+          </div>
+
+          <div class="actions" aria-label="Дії">
+            <a class="btn primary" href="./">На головну</a>
+            <a class="btn" href="./#register">Зареєструватись</a>
+            <button class="btn" type="button" id="backBtn">Назад</button>
+          </div>
+
+          <div class="console" aria-label="Технічна інформація">
+            <div class="head">
+              <div class="lights" aria-hidden="true">
+                <div class="light red"></div><div class="light yellow"></div><div class="light green"></div>
+              </div>
+              <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+                <span class="badge">noindex</span>
+                <span class="badge">GTM</span>
+                <span class="badge">UX</span>
+              </div>
+            </div>
+            <pre id="log">
+[router] page not found
+[action] try "/" or "#register"
+            </pre>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer aria-label="Футер">
+    <div class="wrap">
+      <div class="foot">
+        <div>© <span id="year"></span> • Digital Marketing Academy</div>
+        <div><a href="./">Головна</a> • <a href="./#courses">Курси</a> • <a href="./#faq">FAQ</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // show current path (helps debugging on GitHub Pages)
+      var p = (location.pathname || "/") + (location.search || "") + (location.hash || "");
+      var route = document.getElementById("routePath");
+      if (route) route.textContent = p;
+
+      var log = document.getElementById("log");
+      if (log) log.textContent =
+        "[router] page not found: " + p + "\n" +
+        "[action] open: ./  or  ./#register\n" +
+        "[hint] GitHub Pages uses /404.html for missing routes";
+
+      var backBtn = document.getElementById("backBtn");
+      if (backBtn){
+        backBtn.addEventListener("click", function(){
+          if (history.length > 1) history.back();
+          else location.href = "./";
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
